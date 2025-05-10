@@ -4,10 +4,13 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const pacakgeJson = require("../package.json")
 const devConfig = {
     mode: "development",
+    output:{
+        publicPath:"http://localhost:8081/"
+    },
     devServer : {
         port : 8081,
         historyApiFallback:{
-            index : 'index.html'
+            index : '/index.html'
         }
     },
     plugins : [
